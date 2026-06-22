@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name         bilibili 首页简洁搜索
-@namespace    local
+@namespace    https://github.com/wochong/bilibili-minimal-search
 @version      1.7.2
 @description  B站首页与搜索页的简洁搜索样式
-@author       Me
+@author       wochong
 ==/UserStyle== */
 
 @-moz-document regexp("^https://www\\.bilibili\\.com/(?:index\\.html)?(?:[?#].*)?$") {
@@ -14,7 +14,7 @@
     min-height: 100% !important;
     background: radial-gradient(circle at top, #ffffff 0%, #f7f8fb 55%, #eef1f6 100%) !important;
   }
-
+  
   #app,
   .bili-feed4,
   .bili-header {
@@ -22,11 +22,11 @@
     max-width: none !important;
     margin: 0 !important;
   }
-
+  
   body {
     overflow-x: hidden !important;
   }
-
+  
   body > [id^="doubao-ai-translate-image-assistant"],
   #doubao-ai-assistant,
   #youmind-content-root,
@@ -39,7 +39,7 @@
   .extension-tips-v2 {
     display: none !important;
   }
-
+  
   #app > :not(.bili-feed4),
   .bili-feed4 > :not(.bili-header),
   .bili-header__banner,
@@ -47,11 +47,11 @@
   .bili-header__bar > *:not(.left-entry):not(.center-search-container) {
     display: none !important;
   }
-
+  
   .bili-feed4 {
     display: block !important;
   }
-
+  
   .bili-header {
     min-height: 100vh !important;
     display: flex !important;
@@ -60,7 +60,7 @@
     padding: 0 !important;
     box-sizing: border-box !important;
   }
-
+  
   .bili-header__bar {
     position: static !important;
     inset: auto !important;
@@ -76,11 +76,11 @@
     box-shadow: none !important;
     backdrop-filter: none !important;
   }
-
+  
   .left-entry {
     display: none !important;
   }
-
+  
   .center-search-container,
   .center-search__bar {
     display: block !important;
@@ -88,7 +88,7 @@
     max-width: none !important;
     margin: 0 !important;
   }
-
+  
   #nav-searchform {
     display: flex !important;
     align-items: center !important;
@@ -108,14 +108,14 @@
     border-radius: 6px !important;
     box-shadow: none !important;
   }
-
+  
   #nav-searchform.is-focus,
   #nav-searchform.is-actived,
   .center-search__bar.is-focus,
   .center-search__bar.is-actived {
     border-radius: 6px !important;
   }
-
+  
   .nav-search-content,
   .nav-search-input {
     flex: 1 !important;
@@ -123,7 +123,7 @@
     min-width: 0 !important;
     background: transparent !important;
   }
-
+  
   .nav-search-content {
     display: flex !important;
     align-items: center !important;
@@ -135,7 +135,7 @@
     border-radius: 6px !important;
     background: transparent !important;
   }
-
+  
   .nav-search-input {
     height: 34px !important;
     line-height: 34px !important;
@@ -144,11 +144,11 @@
     font-weight: 400 !important;
     color: #18191c !important;
   }
-
+  
   .nav-search-input::placeholder {
     color: #9499a0 !important;
   }
-
+  
   .nav-search-btn {
     flex: 0 0 auto !important;
     position: static !important;
@@ -165,11 +165,11 @@
     color: #fff !important;
     box-shadow: none !important;
   }
-
+  
   .nav-search-btn svg {
     display: none !important;
   }
-
+  
   .nav-search-btn::after {
     content: "搜索" !important;
     font-size: 16px !important;
@@ -177,7 +177,7 @@
     line-height: 16px !important;
     margin-left: 0 !important;
   }
-
+  
   .search-panel,
   .search-suggestions,
   .suggest-wrap,
@@ -191,7 +191,7 @@
   body {
     background: #f7f8fb !important;
   }
-
+  
   body > [id^="doubao-ai-translate-image-assistant"],
   #doubao-ai-assistant,
   #youmind-content-root,
