@@ -1,0 +1,207 @@
+/* ==UserStyle==
+@name         bilibili 首页简洁搜索
+@namespace    local
+@version      1.7.2
+@description  B站首页与搜索页的简洁搜索样式
+@author       Me
+==/UserStyle== */
+
+@-moz-document regexp("^https://www\\.bilibili\\.com/(?:index\\.html)?(?:[?#].*)?$") {
+  html,
+  body {
+    margin: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    background: radial-gradient(circle at top, #ffffff 0%, #f7f8fb 55%, #eef1f6 100%) !important;
+  }
+
+  #app,
+  .bili-feed4,
+  .bili-header {
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  body > [id^="doubao-ai-translate-image-assistant"],
+  #doubao-ai-assistant,
+  #youmind-content-root,
+  plasmo-csui,
+  doubao-ai-vocabruary-popup-card,
+  knowledegepie-extension,
+  #csui-app,
+  tongyi-web-extension,
+  .browser-tip,
+  .extension-tips-v2 {
+    display: none !important;
+  }
+
+  #app > :not(.bili-feed4),
+  .bili-feed4 > :not(.bili-header),
+  .bili-header__banner,
+  .bili-header__channel,
+  .bili-header__bar > *:not(.left-entry):not(.center-search-container) {
+    display: none !important;
+  }
+
+  .bili-feed4 {
+    display: block !important;
+  }
+
+  .bili-header {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .bili-header__bar {
+    position: static !important;
+    inset: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .left-entry {
+    display: none !important;
+  }
+
+  .center-search-container,
+  .center-search__bar {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  #nav-searchform {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    position: fixed !important;
+    left: 50% !important;
+    top: 52% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+    box-sizing: border-box !important;
+    width: min(480px, calc(100vw - 48px)) !important;
+    height: 44px !important;
+    padding: 5px !important;
+    background: #f6f7f8 !important;
+    border: 1px solid #f1f2f3 !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+  }
+
+  #nav-searchform.is-focus,
+  #nav-searchform.is-actived,
+  .center-search__bar.is-focus,
+  .center-search__bar.is-actived {
+    border-radius: 6px !important;
+  }
+
+  .nav-search-content,
+  .nav-search-input {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    background: transparent !important;
+  }
+
+  .nav-search-content {
+    display: flex !important;
+    align-items: center !important;
+    flex: 1 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 15px !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    background: transparent !important;
+  }
+
+  .nav-search-input {
+    height: 34px !important;
+    line-height: 34px !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    color: #18191c !important;
+  }
+
+  .nav-search-input::placeholder {
+    color: #9499a0 !important;
+  }
+
+  .nav-search-btn {
+    flex: 0 0 auto !important;
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100px !important;
+    height: 34px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    border: 1px solid #00aee8 !important;
+    border-radius: 8px !important;
+    background: #00aee8 !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .nav-search-btn svg {
+    display: none !important;
+  }
+
+  .nav-search-btn::after {
+    content: "搜索" !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    line-height: 16px !important;
+    margin-left: 0 !important;
+  }
+
+  .search-panel,
+  .search-suggestions,
+  .suggest-wrap,
+  .trending {
+    display: none !important;
+  }
+}
+
+@-moz-document regexp("^https://search\\.bilibili\\.com/.*$") {
+  html,
+  body {
+    background: #f7f8fb !important;
+  }
+
+  body > [id^="doubao-ai-translate-image-assistant"],
+  #doubao-ai-assistant,
+  #youmind-content-root,
+  plasmo-csui,
+  doubao-ai-vocabruary-popup-card,
+  knowledegepie-extension,
+  #csui-app,
+  tongyi-web-extension,
+  .browser-tip,
+  .extension-tips-v2 {
+    display: none !important;
+  }
+}
