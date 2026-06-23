@@ -2,16 +2,3 @@ html,
 body {
   background: #f7f8fb !important;
 }
-
-body > [id^="doubao-ai-translate-image-assistant"],
-#doubao-ai-assistant,
-#youmind-content-root,
-plasmo-csui,
-doubao-ai-vocabruary-popup-card,
-knowledegepie-extension,
-#csui-app,
-tongyi-web-extension,
-.browser-tip,
-.extension-tips-v2 {
-  display: none !important;
-}

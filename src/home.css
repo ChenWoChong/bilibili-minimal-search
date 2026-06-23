@@ -18,22 +18,8 @@ body {
   overflow-x: hidden !important;
 }
 
-body > [id^="doubao-ai-translate-image-assistant"],
-#doubao-ai-assistant,
-#youmind-content-root,
-plasmo-csui,
-doubao-ai-vocabruary-popup-card,
-knowledegepie-extension,
-#csui-app,
-tongyi-web-extension,
-.browser-tip,
-.extension-tips-v2 {
-  display: none !important;
-}
-
 #app > :not(.bili-feed4),
 .bili-feed4 > :not(.bili-header),
-.bili-header__banner,
 .bili-header__channel,
 .bili-header__bar > *:not(.left-entry):not(.center-search-container) {
   display: none !important;
@@ -50,6 +36,18 @@ tongyi-web-extension,
   justify-content: center !important;
   padding: 0 !important;
   box-sizing: border-box !important;
+}
+
+.bili-header__banner {
+  display: none !important;
+}
+
+.header-banner__inner {
+  display: none !important;
+}
+
+.header-banner__inner > *:not(.inner-logo) {
+  display: none !important;
 }
 
 .bili-header__bar {
@@ -74,10 +72,31 @@ tongyi-web-extension,
 
 .center-search-container,
 .center-search__bar {
-  display: block !important;
-  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
+}
+
+.center-search-container::before {
+  content: "" !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: min(162px, calc(100vw - 96px)) !important;
+  aspect-ratio: 220 / 105 !important;
+  margin: 0 0 18px !important;
+  background-color: #00a1d6 !important;
+  -webkit-mask-image: url("https://i1.hdslb.com/bfs/archive/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png") !important;
+  mask-image: url("https://i1.hdslb.com/bfs/archive/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png") !important;
+  -webkit-mask-position: center !important;
+  mask-position: center !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-size: contain !important;
+  mask-size: contain !important;
 }
 
 #nav-searchform {
@@ -85,10 +104,10 @@ tongyi-web-extension,
   align-items: center !important;
   justify-content: space-between !important;
   gap: 0 !important;
-  position: fixed !important;
-  left: 50% !important;
-  top: 52% !important;
-  transform: translate(-50%, -50%) !important;
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
   z-index: 10 !important;
   box-sizing: border-box !important;
   width: min(480px, calc(100vw - 48px)) !important;

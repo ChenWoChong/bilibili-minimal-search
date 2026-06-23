@@ -32,7 +32,6 @@ tests/
 - 支持 `https://www.bilibili.com/index.html`
 - 保留并居中展示搜索框
 - 尽量复用 bilibili 原生搜索样式
-- 屏蔽部分常见扩展注入的悬浮层
 - 兼容 `https://search.bilibili.com/` 搜索页的基础样式
 
 ## 开发方式
