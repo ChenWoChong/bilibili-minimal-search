@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         bilibili 首页简洁搜索
 @namespace    https://github.com/wochong/bilibili-minimal-search
-@version      1.7.3
+@version      1.7.4
 @description  B站首页与搜索页的简洁搜索样式
 @author       wochong
 ==/UserStyle== */
@@ -166,7 +166,8 @@
   }
   
   .nav-search-input::placeholder {
-    color: #9499a0 !important;
+    color: transparent !important;
+    opacity: 0 !important;
   }
   
   .nav-search-btn {

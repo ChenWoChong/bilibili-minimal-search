@@ -157,7 +157,8 @@ body {
 }
 
 .nav-search-input::placeholder {
-  color: #9499a0 !important;
+  color: transparent !important;
+  opacity: 0 !important;
 }
 
 .nav-search-btn {

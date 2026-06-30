@@ -34,6 +34,16 @@ test("Stylus homepage CSS keeps the native logo centered above the search form",
   assert.match(focusRule, /box-shadow: none !important;/);
 });
 
+test("Homepage search input hides dynamic placeholder recommendation text", () => {
+  const stylusContent = readFileSync(stylusDist, "utf8");
+  const greasyForkContent = readFileSync(greasyForkDist, "utf8");
+  const placeholderRule = stylusContent.match(/\.nav-search-input::placeholder\s*\{[\s\S]*?\n  \}/)?.[0] ?? "";
+
+  assert.match(placeholderRule, /color: transparent !important;/);
+  assert.match(placeholderRule, /opacity: 0 !important;/);
+  assert.match(greasyForkContent, /\.nav-search-input::placeholder\s*\{\\n  color: transparent !important;\\n  opacity: 0 !important;\\n\}/);
+});
+
 test("Distribution CSS no longer contains local extension-specific overlays", () => {
   const stylusContent = readFileSync(stylusDist, "utf8");
   const greasyForkContent = readFileSync(greasyForkDist, "utf8");

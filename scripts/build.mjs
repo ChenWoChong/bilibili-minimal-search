@@ -14,7 +14,7 @@ const metadata = {
   stylusName: "bilibili 首页简洁搜索",
   greasyForkName: "Bilibili 首页极简搜索 / Bilibili Minimal Search",
   namespace: "https://github.com/wochong/bilibili-minimal-search",
-  version: "1.7.3",
+  version: "1.7.4",
   stylusDescription: "B站首页与搜索页的简洁搜索样式",
   greasyForkDescription: "精简 B 站首页与搜索页，只保留搜索框并屏蔽常见扩展浮层。",
   author: "wochong",
