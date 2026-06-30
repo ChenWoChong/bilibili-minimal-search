@@ -21,13 +21,17 @@ test("Stylus homepage CSS keeps the native logo centered above the search form",
   const content = readFileSync(stylusDist, "utf8");
   const bannerRule = content.match(/\.bili-header__banner\s*\{[\s\S]*?\n  \}/)?.[0] ?? "";
   const searchContainerBeforeRule = content.match(/\.center-search-container::before\s*\{[\s\S]*?\n  \}/)?.[0] ?? "";
+  const searchFormRule = content.match(/#nav-searchform\s*\{[\s\S]*?\n  \}/)?.[0] ?? "";
+  const focusRule = content.match(/#nav-searchform\.is-focus,[\s\S]*?\.center-search__bar\.is-actived\s*\{[\s\S]*?\n  \}/)?.[0] ?? "";
 
   assert.match(bannerRule, /display: none !important;/);
   assert.match(searchContainerBeforeRule, /content: "" !important;/);
   assert.match(searchContainerBeforeRule, /display: block !important;/);
   assert.match(searchContainerBeforeRule, /background-color: #00a1d6 !important;/);
   assert.match(searchContainerBeforeRule, /-webkit-mask-image: url\("https:\/\/i1\.hdslb\.com\/bfs\/archive\/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c\.png"\) !important;/);
-  assert.match(content, /#nav-searchform\s*\{[\s\S]*position: static !important;/);
+  assert.match(searchFormRule, /position: static !important;/);
+  assert.match(searchFormRule, /border: 0 !important;/);
+  assert.match(focusRule, /box-shadow: none !important;/);
 });
 
 test("Distribution CSS no longer contains local extension-specific overlays", () => {

@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         bilibili 首页简洁搜索
 @namespace    https://github.com/wochong/bilibili-minimal-search
-@version      1.7.2
+@version      1.7.3
 @description  B站首页与搜索页的简洁搜索样式
 @author       wochong
 ==/UserStyle== */
@@ -123,7 +123,7 @@
     height: 44px !important;
     padding: 5px !important;
     background: #f6f7f8 !important;
-    border: 1px solid #f1f2f3 !important;
+    border: 0 !important;
     border-radius: 6px !important;
     box-shadow: none !important;
   }
@@ -133,6 +133,7 @@
   .center-search__bar.is-focus,
   .center-search__bar.is-actived {
     border-radius: 6px !important;
+    box-shadow: none !important;
   }
   
   .nav-search-content,
